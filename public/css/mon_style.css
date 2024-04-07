@@ -1,0 +1,66 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 10;
+    padding: 10;
+    width: 90%;
+    display: compact;
+    font-weight: 100;
+    font-family: 'Arial';
+    font-size: 14pt;
+}
+
+
+.contenu {
+    display: grid;
+    place-items: center;
+    margin-top: 3rem;
+}
+
+.pied_page {
+    text-align: right;
+    display: compact;
+    font-family: 'Arial';
+    font-size: 11pt;
+    color: red;
+}
+
+.titre_contenu {
+    text-align: center;
+    font-size: 24pt;
+    color: green;
+    margin-top: 2rem;
+}
+
+.h1 {
+    text-align: center;
+    font-size: 18pt !important;
+    font-family: 'Lucida Console';
+    color: tomato !important;
+}
+
+.h2 {
+    text-align: center;
+    font-size: 16pt !important;
+    font-family: 'Impact';
+    color: coral !important;
+}
+
+#main_nav {
+    display: flex;
+    padding-block: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main_nav li {
+    list-style-type: none;
+}
+
+#main_nav li a {
+    color: orangered;
+    text-transform: uppercase;
+}
