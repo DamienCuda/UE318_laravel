@@ -24,3 +24,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/identite','App\Http\Controllers\ControleurMembres@identite');
 Route::get('/protege','App\Http\Controllers\ControleurMembres@acces_protege')->middleware('auth');
 Route::post('/verifyUser','App\Http\Controllers\AdminController@verifyUser')->name('verifyUser');
+
+Route::any('/firewall/panel/{path?}', function() {
+
+    $panel = new \Shieldon\Firewall\Panel();
+    $panel->csrf(['_token' => csrf_token()]);
+    $panel->entry();
+
+})->where('path', '(.*)');
