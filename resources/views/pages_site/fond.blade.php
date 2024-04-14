@@ -12,8 +12,12 @@
     <nav>
         <ul id="main_nav">
             <li><a href="/membres/vue">Les membres</a></li>
-            <li><a href="/creer">Créer un membre</a></li>
-            <li><a href="/membres/edit">Modifier un membre</a></li>
+
+            @if(auth()->check() && auth()->user()->isVerified)
+                <li><a href="/creer">Créer un membre</a></li>
+                <li><a href="/membres/edit">Modifier un membre</a></li>
+            @endif
+            
             @if(auth()->check())
             <li>
                 <a id="logout_btn" href="{{ route('logout') }}">Se déconnecter</a>

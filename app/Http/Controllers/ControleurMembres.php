@@ -25,8 +25,12 @@ class ControleurMembres extends Controller
 
     public function index()
     {
+        // On vérifie si l'utilisateur courant est vérifié ou non
+        $currentUser = Auth::user();
+        $isVerified = $currentUser ? $currentUser->isVerified : false;
+
         $les_membres = $this->les_membres->all();
-        return view('pages_site/membres', compact('les_membres'));
+        return view('pages_site/membres', compact('les_membres', 'isVerified'));
     }
 
     
