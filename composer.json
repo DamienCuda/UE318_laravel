@@ -9,6 +9,7 @@
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.5",
+        "shieldon/shieldon": "^2.1",
         "spatie/laravel-html": "*"
     },
     "require-dev": {
